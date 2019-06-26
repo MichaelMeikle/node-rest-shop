@@ -8,11 +8,16 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
+    const order = {
+        id: req.body.id,
+        quantity: req.body.quantity
+    };
     res.status(201).json({
-        message: "Orders were created"
+        message: "Orders were created",
+        order: order
     });
 });
-
+//beta tester ts password letsbreakstuff
 router.get('/:orderID', (req, res, next) =>
 {
     const id = req.params.orderID;
