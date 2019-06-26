@@ -5,8 +5,8 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 //Controller imports
-const productController = require('./api/controllers/products');
-const orderController = require('./api/controllers/orders');
+const productController = require('./api/routes/products');
+const orderController = require('./api/routes/orders');
 
 //Database
 mongoose.connect('mongodb+srv://node-shop:' + process.env.MONGO_ATLAS_PW + '@node-rest-shop-kwdqo.mongodb.net/test?retryWrites=true&w=majority',
